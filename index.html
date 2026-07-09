@@ -15,6 +15,17 @@
     display: flex;
     justify-content: center;
     padding: 56px 20px;
+    position: relative;
+    overflow-x: hidden;
+  }
+  .corner-art {
+    position: absolute;
+    top: -30px;
+    right: -20px;
+    width: 150px;
+    height: auto;
+    opacity: 0.95;
+    pointer-events: none;
   }
   .container {
     width: 100%;
@@ -194,6 +205,37 @@
 </style>
 </head>
 <body>
+  <svg class="corner-art" viewBox="0 0 680 900" role="img" aria-label="Illustration of Gary, a bald man in a pink tank top with his hand on his hip">
+    <ellipse cx="340" cy="860" rx="150" ry="18" fill="#120510" opacity="0.6" />
+    <path d="M300 690 L300 830 L262 830 L275 690 Z" fill="#2a1032" />
+    <path d="M380 690 L380 830 L418 830 L405 690 Z" fill="#2a1032" />
+    <path d="M255 828 L300 828 L300 850 L245 850 Z" fill="#120510" />
+    <path d="M380 828 L425 828 L435 850 L380 850 Z" fill="#120510" />
+    <path d="M260 480 Q225 500 220 610 Q218 680 262 692 L320 692 L320 480 Z" fill="#ff2e92" />
+    <path d="M420 480 Q455 500 460 610 Q462 680 418 692 L360 692 L360 480 Z" fill="#ff2e92" />
+    <path d="M250 480 Q340 520 430 480 L430 690 L250 690 Z" fill="#ff4aa3" />
+    <path d="M250 480 Q340 510 430 480 L425 505 Q340 530 255 505 Z" fill="#e8267f" />
+    <path d="M215 540 Q160 555 152 630 Q150 675 185 682 L212 672 Q195 630 208 590 Q215 565 232 548 Z" fill="#f2c49a" />
+    <ellipse cx="165" cy="662" rx="24" ry="19" fill="#f2c49a" />
+    <path d="M143 648 Q152 634 175 640 Q170 662 152 666 Z" fill="#d99b6e" opacity="0.5" />
+    <path d="M448 540 Q470 560 468 600 L455 692 L418 692 L428 560 Z" fill="#f2c49a" />
+    <ellipse cx="340" cy="360" rx="120" ry="130" fill="#f2c49a" />
+    <ellipse cx="340" cy="315" rx="118" ry="105" fill="#f2c49a" />
+    <ellipse cx="255" cy="360" rx="20" ry="34" fill="#f2c49a" />
+    <ellipse cx="425" cy="360" rx="20" ry="34" fill="#f2c49a" />
+    <ellipse cx="255" cy="360" rx="10" ry="18" fill="#d99b6e" />
+    <ellipse cx="425" cy="360" rx="10" ry="18" fill="#d99b6e" />
+    <path d="M255 308 Q270 290 300 302" stroke="#3a2318" stroke-width="7" fill="none" stroke-linecap="round" />
+    <path d="M383 305 Q408 278 428 298" stroke="#3a2318" stroke-width="8" fill="none" stroke-linecap="round" />
+    <ellipse cx="278" cy="350" rx="9" ry="11" fill="#241030" />
+    <ellipse cx="404" cy="344" rx="9" ry="13" fill="#241030" />
+    <circle cx="281" cy="346" r="2.5" fill="#fbf2e3" />
+    <circle cx="407" cy="339" r="2.5" fill="#fbf2e3" />
+    <path d="M340 360 Q332 385 340 392 Q348 388 344 375" fill="#d99b6e" />
+    <path d="M292 422 Q340 458 388 420 Q378 446 340 452 Q302 446 292 422 Z" fill="#8a3b2a" />
+    <path d="M302 424 Q340 440 378 422" stroke="#fbf2e3" stroke-width="4" fill="none" stroke-linecap="round" />
+  </svg>
+
   <div class="container">
     <div class="eyebrow">an oracle for people who cannot decide</div>
     <h1>GARY SAYS</h1>
