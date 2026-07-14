@@ -308,6 +308,16 @@
     box-shadow: 0 0 8px rgba(255,40,60,0.9);
     animation: pulseDot 1.6s ease-in-out infinite;
   }
+  .nav-link.predictions {
+    background: linear-gradient(135deg, rgba(78,201,132,0.14), rgba(78,201,132,0.04));
+    border: 1px solid rgba(78,201,132,0.45);
+    color: #8fe8b4;
+    box-shadow: 0 0 14px rgba(78,201,132,0.12);
+  }
+  .nav-link.predictions:hover {
+    box-shadow: 0 0 22px rgba(78,201,132,0.28);
+    background: linear-gradient(135deg, rgba(78,201,132,0.22), rgba(78,201,132,0.07));
+  }
   @keyframes pulseDot {
     0%, 100% { opacity: 1; }
     50% { opacity: 0.35; }
@@ -401,6 +411,12 @@
           <path d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2L12 16.4l-6.3 4.6 2.3-7.2-6-4.6h7.6z" fill="#ff6f91"/>
         </svg>
         Cosmic Compatibility
+      </a>
+      <a href="predictions.html" class="nav-link predictions">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 2.5l1.5 3.5h3.8l-3 2.6 1.1 3.8-3.4-2.3-3.4 2.3 1.1-3.8-3-2.6h3.8z" fill="#4ec984"/>
+        </svg>
+        Score Predictions
       </a>
       <a href="red-light.html" class="nav-link redlight">
         <span class="pulse-dot"></span>
