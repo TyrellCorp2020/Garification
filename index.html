@@ -246,32 +246,63 @@
     display: none;
   }
 
-  .red-light-link {
+
+  .nav-links {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+    opacity: 0;
+    animation: navFadeUp 700ms ease-out 400ms forwards;
+  }
+  @keyframes navFadeUp {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .nav-link {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    margin-top: 34px;
-    padding: 11px 20px;
+    gap: 9px;
+    padding: 11px 18px;
     border-radius: 999px;
-    background: linear-gradient(135deg, rgba(255,40,60,0.16), rgba(255,40,60,0.06));
-    border: 1px solid rgba(255,40,60,0.55);
-    color: #ff8a97;
-    font-size: 13px;
+    font-size: 12.5px;
     font-weight: 700;
     letter-spacing: 0.03em;
     text-decoration: none;
     text-transform: uppercase;
-    box-shadow: 0 0 18px rgba(255,40,60,0.18);
-    transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
+    transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease, border-color 180ms ease;
   }
-  .red-light-link:hover {
+  .nav-link svg { flex-shrink: 0; }
+  .nav-link:hover {
     transform: translateY(-2px);
-    box-shadow: 0 0 26px rgba(255,40,60,0.32);
-    background: linear-gradient(135deg, rgba(255,40,60,0.24), rgba(255,40,60,0.1));
   }
-  .red-light-dot {
-    width: 8px;
-    height: 8px;
+  .nav-link:active {
+    transform: translateY(0px) scale(0.97);
+  }
+  .nav-link.compat {
+    background: linear-gradient(135deg, rgba(255,111,145,0.14), rgba(255,111,145,0.04));
+    border: 1px solid rgba(255,111,145,0.45);
+    color: #ffb0c4;
+    box-shadow: 0 0 14px rgba(255,111,145,0.12);
+  }
+  .nav-link.compat:hover {
+    box-shadow: 0 0 22px rgba(255,111,145,0.28);
+    background: linear-gradient(135deg, rgba(255,111,145,0.22), rgba(255,111,145,0.07));
+  }
+  .nav-link.redlight {
+    background: linear-gradient(135deg, rgba(255,40,60,0.14), rgba(255,40,60,0.04));
+    border: 1px solid rgba(255,40,60,0.45);
+    color: #ff9aa5;
+    box-shadow: 0 0 14px rgba(255,40,60,0.12);
+  }
+  .nav-link.redlight:hover {
+    box-shadow: 0 0 22px rgba(255,40,60,0.28);
+    background: linear-gradient(135deg, rgba(255,40,60,0.22), rgba(255,40,60,0.07));
+  }
+  .nav-link.redlight .pulse-dot {
+    width: 6px;
+    height: 6px;
     border-radius: 50%;
     background: #ff283c;
     box-shadow: 0 0 8px rgba(255,40,60,0.9);
@@ -279,7 +310,7 @@
   }
   @keyframes pulseDot {
     0%, 100% { opacity: 1; }
-    50% { opacity: 0.4; }
+    50% { opacity: 0.35; }
   }
 
   footer {
@@ -364,15 +395,18 @@
       <div class="panel panel-r"></div>
     </div>
 
-    <a href="compatibility.html" class="red-light-link" style="background: linear-gradient(135deg, rgba(255,111,145,0.16), rgba(255,111,145,0.06)); border-color: rgba(255,111,145,0.55); color: #ffb0c4; box-shadow: 0 0 18px rgba(255,111,145,0.18); margin-top: 14px;">
-      <span class="red-light-dot" style="background: #ff6f91; box-shadow: 0 0 8px rgba(255,111,145,0.9);"></span>
-      Gary's Cosmic Compatibility
-    </a>
-
-    <a href="red-light.html" class="red-light-link">
-      <span class="red-light-dot"></span>
-      Gary's Red Light Zone — 18+
-    </a>
+    <div class="nav-links">
+      <a href="compatibility.html" class="nav-link compat">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2L12 16.4l-6.3 4.6 2.3-7.2-6-4.6h7.6z" fill="#ff6f91"/>
+        </svg>
+        Cosmic Compatibility
+      </a>
+      <a href="red-light.html" class="nav-link redlight">
+        <span class="pulse-dot"></span>
+        Red Light Zone — 18+
+      </a>
+    </div>
 
     <footer>Gary offers emotional support, not legal, medical, or financial counsel.</footer>
   </div>
